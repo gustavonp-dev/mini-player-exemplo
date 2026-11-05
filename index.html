@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Music • Player</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       1. CABEÇALHO SUPERIOR (Desafio: position: sticky no topo)
+       =================================================================== -->
+  <header class="header-ytmusic">
+    <div class="logo-ytmusic">
+      <span class="icone-play-logo">▶</span>
+      <h1 class="titulo-logo">Music</h1>
+    </div>
+    <span class="status-usuario">ONLINE • CONTA PREMIUM</span>
+  </header>
+
+  <!-- ===================================================================
+       2. CONTEÚDO PRINCIPAL (Player Central e Fila de Músicas)
+       =================================================================== -->
+  <main class="container-ytmusic">
+
+    <!-- SEÇÃO DO PLAYER PRINCIPAL -->
+    <section class="secao-player">
+
+      <!-- TELA DE REPRODUÇÃO (Desafio: position: relative como âncora) -->
+      <article class="tela-video">
+        <!-- Elementos sobrepostos na tela (Desafio: position: absolute) -->
+        <span class="badge-qualidade">1080p HD</span>
+        <span class="badge-modo">VÍDEO • MÚSICA</span>
+        <span class="tag-tempo-video">02:15 / 03:40</span>
+        <button type="button" class="btn-like-flutuante" title="Marcar como Gostei">♥ CURTIR</button>
+
+        <!-- Imagem do clipe musical -->
+        <img class="img-video" src="img/capa-player.svg" alt="Clipe Midnight Drive">
+      </article>
+
+      <!-- INFORMAÇÕES DA FAIXA -->
+      <div class="info-faixa">
+        <h2 class="titulo-faixa">MIDNIGHT DRIVE (CLIPE OFICIAL)</h2>
+        <p class="artista-faixa">Retro Cyberwave • Álbum: Neon Horizon • 1.4M visualizações</p>
+
+        <!-- BARRA DE PROGRESSO -->
+        <div class="barra-tempo-total">
+          <div class="barra-tempo-atual"></div>
+        </div>
+
+        <!-- CONTROLES PRINCIPAIS -->
+        <div class="controles-principais">
+          <button type="button" class="btn-acao-secundaria" title="Aleatório">🔀</button>
+          <button type="button" class="btn-acao-controle" title="Faixa Anterior">⏮</button>
+          <button type="button" class="btn-acao-play" title="Pausar / Reproduzir">⏸</button>
+          <button type="button" class="btn-acao-controle" title="Próxima Faixa">⏭</button>
+          <button type="button" class="btn-acao-secundaria" title="Repetir">🔁</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SEÇÃO FILA DE REPRODUÇÃO (A SEGUIR) -->
+    <section class="secao-fila">
+      <h3 class="titulo-fila">A SEGUIR • FILA DE REPRODUÇÃO</h3>
+      <p class="descricao-fila">Role a tela para navegar pelas próximas músicas da fila.</p>
+
+      <div class="item-musica">
+        <span class="numero-faixa">01</span>
+        <div class="dados-musica">
+          <strong class="nome-musica">Neon Lights Horizon</strong>
+          <span class="sub-musica">Retro Cyberwave • 03:52</span>
+        </div>
+        <button type="button" class="btn-tocar-item">TOCAR</button>
+      </div>
+
+      <div class="item-musica">
+        <span class="numero-faixa">02</span>
+        <div class="dados-musica">
+          <strong class="nome-musica">Synthwave Nights</strong>
+          <span class="sub-musica">Sunset Dreamers • 04:10</span>
+        </div>
+        <button type="button" class="btn-tocar-item">TOCAR</button>
+      </div>
+
+      <div class="item-musica">
+        <span class="numero-faixa">03</span>
+        <div class="dados-musica">
+          <strong class="nome-musica">Midnight Highway Cruise</strong>
+          <span class="sub-musica">Voltage Pulse • 03:28</span>
+        </div>
+        <button type="button" class="btn-tocar-item">TOCAR</button>
+      </div>
+
+      <div class="item-musica">
+        <span class="numero-faixa">04</span>
+        <div class="dados-musica">
+          <strong class="nome-musica">Cyber City Rain</strong>
+          <span class="sub-musica">Lo-Fi Neon • 02:45</span>
+        </div>
+        <button type="button" class="btn-tocar-item">TOCAR</button>
+      </div>
+
+      <div class="item-musica">
+        <span class="numero-faixa">05</span>
+        <div class="dados-musica">
+          <strong class="nome-musica">After Hours Drive</strong>
+          <span class="sub-musica">The Velocity Squad • 04:30</span>
+        </div>
+        <button type="button" class="btn-tocar-item">TOCAR</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       3. MINIPLAYER FLUTUANTE (Desafio: position: fixed no canto inferior direito)
+       =================================================================== -->
+  <aside class="miniplayer-flutuante">
+    <div class="miniplayer-topo">
+      <span class="miniplayer-tag">MINIPLAYER YT</span>
+      <button type="button" class="btn-fechar-mini" title="Fechar Miniplayer">✕</button>
+    </div>
+    <div class="miniplayer-corpo">
+      <img class="img-mini-thumb" src="img/capa-player.svg" alt="Miniatura">
+      <div class="miniplayer-textos">
+        <strong class="miniplayer-titulo">Midnight Drive</strong>
+        <span class="miniplayer-autor">Retro Cyberwave</span>
+      </div>
+      <button type="button" class="btn-mini-play" title="Pausar / Play">⏸</button>
+    </div>
+  </aside>
+
+</body>
+</html>

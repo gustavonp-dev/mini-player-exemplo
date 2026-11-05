@@ -1,0 +1,352 @@
+/* ==========================================================================
+   CSS INICIAL BÁSICO - LABORATÓRIO DE POSICIONAMENTO E Z-INDEX
+   TEMA: YOUTUBE MUSIC (PLAYER PRINCIPAL & MINIPLAYER FLUTUANTE)
+   --------------------------------------------------------------------------
+   AVISO AOS ALUNOS:
+   Este arquivo contém apenas as cores escuras, fontes e tamanhos básicos.
+   TODO O POSICIONAMENTO (relative, absolute, fixed, sticky) É COM VOCÊ!
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #030303;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  min-height: 2200px; /* Altura extra para testar a rolagem da página */
+}
+
+/* --------------------------------------------------------------------------
+   1. CABEÇALHO DO YOUTUBE MUSIC
+   (Desafio: Deixar preso no topo ao rolar a tela com position: sticky)
+   -------------------------------------------------------------------------- */
+.header-ytmusic {
+  background-color: #030303;
+  border-bottom: 1px solid #272727;
+  padding: 14px 24px;
+  /* TODO [ALUNO - PASSO 1]:
+     Aplique position: sticky, top (ex: 0) e z-index aqui */
+}
+
+.logo-ytmusic {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icone-play-logo {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 11px;
+  margin-right: 6px;
+}
+
+.titulo-logo {
+  display: inline-block;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.status-usuario {
+  font-size: 12px;
+  font-weight: bold;
+  color: #aaaaaa;
+  float: right;
+  margin-top: 5px;
+}
+
+/* --------------------------------------------------------------------------
+   2. CONTEÚDO PRINCIPAL
+   -------------------------------------------------------------------------- */
+.container-ytmusic {
+  width: 90%;
+  max-width: 760px;
+  margin: 25px auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. TELA DE VÍDEO / REPRODUÇÃO
+   (Desafio: Tornar a tela a referência espacial com position: relative)
+   -------------------------------------------------------------------------- */
+.tela-video {
+  background-color: #121212;
+  border: 1px solid #272727;
+  /* TODO [ALUNO - PASSO 2]:
+     Adicione position: relative aqui para servir de âncora para os filhos */
+}
+
+.img-video {
+  width: 100%;
+  height: 380px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   4. ELEMENTOS SOBREPOSTOS NA TELA DO VÍDEO
+   (Desafio: Desacoplar do fluxo com position: absolute sobre a imagem)
+   -------------------------------------------------------------------------- */
+.badge-qualidade {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  /* TODO [ALUNO - PASSO 3A]:
+     Aplique position: absolute, top (ex: 16px), left (ex: 16px) e z-index aqui */
+}
+
+.badge-modo {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  /* TODO [ALUNO - PASSO 3B]:
+     Aplique position: absolute, top (ex: 16px), right (ex: 16px) e z-index aqui */
+}
+
+.tag-tempo-video {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  /* TODO [ALUNO - PASSO 3C]:
+     Aplique position: absolute, bottom (ex: 16px), left (ex: 16px) e z-index aqui */
+}
+
+.btn-like-flutuante {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ff0033;
+  border: 1px solid #ff0033;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  /* TODO [ALUNO - PASSO 3D]:
+     Aplique position: absolute, bottom (ex: 16px), right (ex: 16px) e z-index aqui */
+}
+
+/* --------------------------------------------------------------------------
+   5. DETALHES DA FAIXA E CONTROLES PRINCIPAIS
+   -------------------------------------------------------------------------- */
+.info-faixa {
+  background-color: #0f0f0f;
+  border: 1px solid #272727;
+  border-top: none;
+  padding: 20px;
+  margin-bottom: 35px;
+}
+
+.titulo-faixa {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.artista-faixa {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin: 0 0 16px 0;
+}
+
+.barra-tempo-total {
+  width: 100%;
+  height: 4px;
+  background-color: #333333;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.barra-tempo-atual {
+  width: 60%;
+  height: 100%;
+  background-color: #ff0000;
+  border-radius: 2px;
+}
+
+.controles-principais {
+  text-align: center;
+}
+
+.btn-acao-secundaria {
+  background: transparent;
+  color: #aaaaaa;
+  border: none;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.btn-acao-controle {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.btn-acao-play {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   6. FILA DE MÚSICAS A SEGUIR
+   -------------------------------------------------------------------------- */
+.secao-fila {
+  background-color: #0f0f0f;
+  border: 1px solid #272727;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.titulo-fila {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.descricao-fila {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin: 0 0 18px 0;
+}
+
+.item-musica {
+  padding: 12px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.numero-faixa {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  color: #666666;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.dados-musica {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75%;
+}
+
+.nome-musica {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.sub-musica {
+  font-size: 12px;
+  color: #888888;
+}
+
+.btn-tocar-item {
+  float: right;
+  background-color: transparent;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   7. MINIPLAYER FLUTUANTE DO YOUTUBE
+   (Desafio: Fixar no canto inferior direito da tela com position: fixed)
+   -------------------------------------------------------------------------- */
+.miniplayer-flutuante {
+  background-color: #1f1f1f;
+  border: 1px solid #383838;
+  border-radius: 8px;
+  width: 320px;
+  padding: 10px;
+  /* TODO [ALUNO - PASSO 4]:
+     Aplique position: fixed, bottom (ex: 24px), right (ex: 24px) e z-index aqui */
+}
+
+.miniplayer-topo {
+  margin-bottom: 8px;
+}
+
+.miniplayer-tag {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ff0000;
+  letter-spacing: 0.5px;
+}
+
+.btn-fechar-mini {
+  float: right;
+  background: transparent;
+  color: #888888;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.img-mini-thumb {
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  height: 38px;
+  border-radius: 4px;
+}
+
+.miniplayer-textos {
+  display: inline-block;
+  vertical-align: middle;
+  width: 180px;
+  margin-left: 8px;
+}
+
+.miniplayer-titulo {
+  display: block;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.miniplayer-autor {
+  font-size: 11px;
+  color: #aaaaaa;
+}
+
+.btn-mini-play {
+  float: right;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
